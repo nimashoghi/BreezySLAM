@@ -50,7 +50,7 @@ SOURCES = [
     "../c/ziggurat.c",
 ]
 
-from distutils.core import setup, Extension
+from setuptools import setup, Extension
 
 module = Extension(
     "pybreezyslam",
@@ -65,6 +65,7 @@ setup(
     description="Simple, efficient SLAM in Python",
     packages=["breezyslam"],
     ext_modules=[module],
+    setup_requires=["wheel"],
     author="Simon D. Levy and Suraj Bajracharya",
     author_email="simon.d.levy@gmail.com",
     url="https://github.com/nimashoghi/BreezySLAM",
